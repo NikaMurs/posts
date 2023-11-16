@@ -1,0 +1,49 @@
+.postButtons{
+    margin-top: 10px;
+    width: 100%;
+    border-top: 1px solid #9aa3b4;
+    display: flex;
+    justify-content: right;
+    gap: 5px;
+    padding-top: 10px;
+}
+
+.postButtons button {
+    white-space: nowrap;
+    padding: 5px 10px;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.postButtonChange{
+    background-color: #4469ae;
+    border: 1px solid #4469ae;
+}
+
+.postButtonChange:hover {
+    background-color: #3d5e9c;
+    border-color: #3d5e9c;
+}
+
+.postButtonChange:active {
+    background-color: #365389;
+    border-color: #365389;
+}
+
+.postButtonDelete{
+    background-color: #b04546;
+    border: 1px solid #b04546;
+}
+
+.postButtonDelete:hover {
+    background-color: #9e3d3f;
+    border-color: #9e3d3f;
+}
+
+.postButtonDelete:active {
+    background-color: #8f3638;
+    border-color: #8f3638;
+}
