@@ -9,22 +9,22 @@ export default function CreatePost() {
         id: 0,
         content: ''
     })
-    
-    function onChange({target}: ChangeEvent<HTMLTextAreaElement>) {
-        const {name, value} = target
-        setForm((prevForm) => ({...prevForm, [name]: value}))
+
+    function onChange({ target }: ChangeEvent<HTMLTextAreaElement>) {
+        const { name, value } = target
+        setForm((prevForm) => ({ ...prevForm, [name]: value }))
     }
 
-    function onSubmit(e: React.FormEvent){
+    function onSubmit(e: React.FormEvent) {
         e.preventDefault()
         fetch(process.env.REACT_APP_URL + '/posts', {
             method: 'POST',
             body: JSON.stringify(form)
         })
-        .then(()=>{navigate('/')})
+            .then(() => { navigate('/') })
     }
 
-    function onClose(){
+    function onClose() {
         navigate('/');
     }
 
@@ -34,7 +34,7 @@ export default function CreatePost() {
             <i className="fa-solid fa-xmark" onClick={onClose}></i>
             <div className='createPostForm'>
                 <img className='postPersonAvatar' src="https://i.pravatar.cc/50" alt="" />
-                <textarea name='content' placeholder='Напишите текст...' onChange={onChange}/>
+                <textarea name='content' placeholder='Напишите текст...' onChange={onChange} />
                 <button>Опубликовать</button>
             </div>
         </form>
